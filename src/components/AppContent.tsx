@@ -4,7 +4,7 @@ import { useState } from 'react';
 import logo from '../logo.svg';
 import { Button, Typography } from '@mui/material';
 
-export default function AppContainer() {
+export default function AppContent() {
 
     var chad: string = 'chad';
 

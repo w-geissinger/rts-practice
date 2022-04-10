@@ -1,4 +1,4 @@
-import AppContainer from './components/AppContainer'
+import AppContent from './components/AppContent'
 
 import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material';
@@ -26,7 +26,7 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <ThemeProvider theme={theme}>
-                    <AppContainer/>
+                    <AppContent/>
                 </ThemeProvider>
             </header>
         </div>
