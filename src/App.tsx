@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button, createTheme, ThemeProvider } from '@mui/material';
@@ -21,11 +21,10 @@ const theme = createTheme({
   });
 
 function App() {
-    
-
-    var X: number = 0;
 
     var chad: string = 'chad';
+
+    const [X, setX] = useState(0)
 
     return (
         <div className="App">
@@ -35,7 +34,7 @@ function App() {
                     <p>
                         Edit <code>dan@dan-jira.com/App.tsx</code> and save to reload.
                     </p>
-                    <Button color='primary' variant='contained' onClick={() => { X++ }}>
+                    <Button color='primary' variant='contained' onClick={() => { setX(X+1) }}>
                          {`${X} ${chad}`}
                     </Button>
                     <a
