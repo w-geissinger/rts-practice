@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import AppContainer from './components/AppContainer'
+
 import './App.css';
-import { Button, createTheme, ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 const theme = createTheme({
     palette: {
@@ -22,36 +22,21 @@ const theme = createTheme({
 
 function App() {
 
-    var chad: string = 'chad';
-
-    const [X, setX] = useState(0)
-
     return (
         <div className="App">
             <header className="App-header">
                 <ThemeProvider theme={theme}>
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <p>
-                        Edit <code>dan@dan-jira.com/App.tsx</code> and save to reload.
-                    </p>
-                    <Button color='primary' variant='contained' onClick={() => { setX(X+1) }}>
-                         {`${X} ${chad}`}
-                    </Button>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
+                    <AppContainer/>
                 </ThemeProvider>
             </header>
         </div>
     );
-    
-    
-    
+}
+
+
+
+function PageLayout() {
+
 }
 
 export default App;
