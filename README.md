@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Getting Started with rts-practice
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This project is intended to serve as a practice playground. Do not commit anything such as passwords, usernames, email addresses, or any other personally identifying or otherwise sensitive information to this repository.
+
+Some dependencies have already been installed to ease beginners into using dependencies that can change the ways in which you can use with React. TypeScript is one such example. Material UI has also been installed for easy aesthetic pages, as well as the emotion styles library as a dependency of MUI. 
+
+## Dependency Documentation Links
+
+[React-TypeScript](https://www.typescriptlang.org/docs/handbook/react.html)
+
+[Material UI](https://mui.com/material-ui/react-button/) for quality pre-baked UI components
+
+[Emotion](https://emotion.sh/docs/@emotion/react) for easy styling
+
 
 ## Available Scripts
 
@@ -16,7 +29,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode. There is currently no test coverage in this repository.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
