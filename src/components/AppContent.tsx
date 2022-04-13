@@ -1,41 +1,41 @@
-import useCustomHookLogic from '../utils/hooks/useMousePosition'
+import { AppBar, Button, Toolbar, Box, Grid, Paper, ButtonGroup } from '@mui/material';
+import React from 'react';
+import DemoPage from './pages/DemoPage';
+import WaynePage from './pages/WaynePage';
+import DanPage from './pages/DanPage';
 
-import { useState } from 'react';
-import logo from '../logo.svg';
-import { Button, Typography } from '@mui/material';
 
-export default function AppContent() {
 
-    var chad: string = 'chad';
+export default function AppContent():JSX.Element {
+    const [page, setPage] = React.useState(0);
 
-    const [buttonCounter, setButtonCounter] = useState(0);
-
-    const mousePos = useCustomHookLogic();
-
-    const { x, y } = mousePos;
-
+    const [pages, setPages] = React.useState([
+        <DemoPage />,
+        <DanPage />, 
+        <WaynePage />
+    ]);
     return (
         <>
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-                Edit <code>dan@dan-jira.com/App.tsx</code> and save to reload.
-            </p>
-            <Button color='primary' variant='contained' onClick={() => { setButtonCounter(buttonCounter+1) }}>
-                {`${buttonCounter} ${chad}`}
-            </Button>
-            <p>
-                <Typography>
-                    Mouse position example:  X: {x}  Y: {y}
-                </Typography>
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Learn React
-            </a>
+            <div style={{
+                display: 'grid',
+                gridTemplateRows: '6vh 94vh',
+                width: '100%'
+            }}>
+                <ButtonGroup fullWidth size='small'>
+                    <Button color='primary' variant='contained' onClick={()=>{setPage(0)}}>
+                        Tutorial Page
+                    </Button>
+                    <Button color='primary' variant='contained' onClick={()=>{setPage(1)}}>
+                        Dan's Page
+                    </Button>
+                    <Button color='primary' variant='contained' onClick={()=>{setPage(2)}}>
+                        Wayne's Page
+                    </Button>
+                </ButtonGroup>
+                <div>
+                    {pages[page]}
+                </div>
+            </div>
         </>
     )
 }

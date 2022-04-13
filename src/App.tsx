@@ -3,18 +3,19 @@ import AppContent from './components/AppContent'
 import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material';
 
+//https://coolors.co/333432-4130c5-f7717d-59ffa0-ffeedd
 const theme = createTheme({
     palette: {
       primary: {
-        light: '#757ce8',
-        main: '#3f50b5',
-        dark: '#002884',
+        light: '#A69DE7',
+        main: '#6A5CD6',
+        dark: '#261C73',
         contrastText: '#fff',
       },
       secondary: {
-        light: '#ff7961',
-        main: '#f44336',
-        dark: '#ba000d',
+        light: '#70716F',
+        main: '#50514F',
+        dark: '#333432',
         contrastText: '#000',
       },
     },
