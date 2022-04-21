@@ -34,10 +34,4 @@ function App() {
     );
 }
 
-
-
-function PageLayout() {
-
-}
-
 export default App;
